@@ -18,9 +18,11 @@ if ($act == 'user_center')
 		$user_name = $_SESSION['user_name'];
 		$user_id = $_SESSION['user_id'];
 		$header_page = file_get_contents(TPLPATH.'header.html');
+		$activity_list_page = showActivityList($user_id);
 		$render_data = array(
 			'user_name' => $user_name,
-			'header'	=> $header_page
+			'header'	=> $header_page,
+			'activity_list' => $activity_list_page
 			);
 		$user_center_page = file_get_contents(TPLPATH.'user.html');
 		echo render($user_center_page,$render_data);

@@ -38,19 +38,26 @@ class DAO
 	// 	return $ans;
 	// }
 
-	function select($table,$data,$logic='AND',$condition="")
+	function select($table,$data='',$logic='AND',$condition="")
 	{
 		//logic is AND or OR
-		$where = "where ";
-		$count_number = 0;
-		foreach ($data as $key => $value) {
-			$count_number += 1;
-			if ($count_number > 1)
-			{
-				$where .= "{$logic} ";
-			}
-			$where .= "`{$key}`='{$value}' ";
+		if ($data == '')
+		{
+			$where = "where 1";
 		}
+		else
+		{
+			$where = "where ";	
+			$count_number = 0;
+			foreach ($data as $key => $value) {
+				$count_number += 1;
+				if ($count_number > 1)
+				{
+					$where .= "{$logic} ";
+				}
+				$where .= "`{$key}`='{$value}' ";
+			}
+		}	
 		$sql = "select * from {$table} " . $where . $condition;
 		$res = mysql_query($sql);
 		$resArr = array();

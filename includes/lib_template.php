@@ -2,7 +2,15 @@
 function showActivityList($user_id)
 {
 	$db = new DAO();
-	$res = $db->select('activity',array('user_id' => $user_id));
+	if ($user_id == -1)
+	{
+		$res = $db->select('activity');
+	}
+	else 
+	{
+		$res = $db->select('activity',array('user_id' => $user_id));
+	}	
+	
 	if ($res)
 	{
 		$activity_list_page = file_get_contents(TPLPATH.'activity_list.html');
@@ -37,4 +45,29 @@ function showAddActivity($user_id)
 		'header'  => $header_page
 		);
 	return render($add_activity_page,$render_data);
+}
+
+function showHeader()
+{
+	$header = file_get_contents(TPLPATH.'header.html');
+	echo $header;
+}
+
+function render($tpl,$data)
+{
+	foreach ($data as $key => $value) {
+		$pattern = '{$' . $key . '}';
+		$tpl = str_replace($pattern, $value, $tpl);
+	}
+	return $tpl;
+}
+
+//template function
+function showMessage($msg = 'default',$href='./index.php')
+{
+	$header = file_get_contents(TPLPATH.'header.html');
+	$msgtpl = file_get_contents(TPLPATH.'show message.html');
+	$msgtpl = render($msgtpl,array('message' => $msg, 'href'=>$href,'header'=>$header));
+	echo $msgtpl;
+	die();
 }

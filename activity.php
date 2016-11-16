@@ -1,52 +1,54 @@
 <?php
 require_once('./includes/init.php');
 
-if (isset($_SESSION['user_name']) && isset($_SESSION['user_id']))
-{
-	//show page
-	$user_id = $_SESSION['user_id'];
-}
-else
-{
-	showMessage('please login','./login.html');
-}
+$act = isset($_REQUEST['act']) ? $_REQUEST['act'] : 'show_lists';
 
-function showActivityList($user_id)
+if ($act == 'show_all')
 {
-	$db = new DAO();
-	$res = $db->select('activity',array('user_id' => $user_id));
-	if ($res)
+	die(showActivityList(-1));
+}
+else if ($act == 'add')
+{
+	if (!checkUserLogin())
 	{
-		$activity_list_page = file_get_contents(TPLPATH.'activity_list.html');
-		$activity_list_item_page = file_get_contents(TPLPATH.'activity_list_item.html');
-		//only one row
-		if (isset($res['user_id']))
-		{
-			$activity_list_page_rendered = render($activity_list_item_page,$res);
-		}
-		else
-		{
-			$activity_list_page_rendered = array();
-			foreach ($res as $key => $value) {
-				$activity_list_page_rendered[] = render($activity_list_item_page,$value);
-			}
-			$activity_list_page_rendered = implode('<br>', $activity_list_page_rendered);
-		}
-
-		$render_data = array(
-			'list_items' => $activity_list_page_rendered
-			);
-		return render($activity_list_page,$render_data);
+		showMessage('please login','./login.html');
 	}
-}
-
-function showAddActivity($user_id)
-{
+	$user_id = $_SESSION['user_id'];
 	$add_activity_page = file_get_contents(TPLPATH.'add_activity.html');
 	$header_page = file_get_contents(TPLPATH.'header.html');
-	$render_data = array(
-		'user_id' => $user_id,
-		'header'  => $header_page
-		);
-	return render($add_activity_page,$render_data);
+	$add_activity_page_rendered = render($add_activity_page,array('user_id' => $user_id,'header' => $header_page));
+	die($add_activity_page_rendered);
 }
+else if ($act == 'insert')
+{
+	if (!checkUserLogin())
+	{
+		showMessage('please login','./login.html');
+	}
+	$act_info = array();
+	$act_info['user_id'] = getFormData('user_id',-1);
+	$act_info['name'] = getFormData('name');
+	$act_info['place'] = getFormData('place');
+	$act_info['discription'] = getFormData('discription');
+
+	if ($act_info['user_id'] == -1)
+	{
+		//ready for ajax call
+		die(json_encode('wrong user'));
+	}
+	if ($act_info['name'] == '')
+	{
+		showMessage('wrong activity name','./user.php');	
+	}
+	$db = new DAO();
+	$res = $db->insert('activity',$act_info);
+	if ($res)
+	{
+		showMessage('add activity success','./user.php');
+	}
+	else
+	{
+		showMessage('add activity fail','./user.php');
+	}
+}
+//act == show_list is used in user.php
