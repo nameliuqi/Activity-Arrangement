@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			添加活动
+		</title>
+		<meta charset="utf-8" /> 
+	</head>
+	<body>
+		{$header}
+		<div class="add">
+			<form action="add_activity.php" method="post">
+				<input type="text" name="user_id" value="{$user_id}" style="display:none">
+				<p>activity name:</p>
+				<input type="text" name="name">
+				<p>place:</p>
+				<input type="text" name="place">
+				<p>discription:</p>
+				<input type="text" name="discription">
+				<input type="text" name='act' style="display:none" value="add_activity">
+				<br> <br>
+				<input type="submit">
+			</form>			
+		</div>
+	</body>
+</html>

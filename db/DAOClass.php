@@ -21,18 +21,71 @@ class DAO
 		$this->link = mysql_connect($host, $user, $pwd) or die('数据库服务器连接错误:' . mysql_error());
 		mysql_select_db($db_name,$this->link) or die('数据库连接错误:' . mysql_error());
 	}
+
 	function query($sql)
 	{
 		return mysql_query($sql,$this->link);
 	}
-	function select($sql)
+
+	// function select($sql)
+	// {
+	// 	$ans = array();
+	// 	$res = mysql_query($sql,$this->link);
+	// 	while ($res && $row = mysql_fetch_assoc($res))
+	// 	{
+	// 		$ans[] = $row;
+	// 	}
+	// 	return $ans;
+	// }
+
+	function select($table,$data,$logic='AND',$condition="")
 	{
-		$ans = array();
-		$res = mysql_query($sql,$this->link);
-		while ($res && $row = mysql_fetch_assoc($res))
-		{
-			$ans[] = $row;
+		//logic is AND or OR
+		$where = "where ";
+		$count_number = 0;
+		foreach ($data as $key => $value) {
+			$count_number += 1;
+			if ($count_number > 1)
+			{
+				$where .= "{$logic} ";
+			}
+			$where .= "`{$key}`='{$value}' ";
 		}
-		return $ans;
+		$sql = "select * from {$table} " . $where . $condition;
+		$res = mysql_query($sql);
+		$resArr = array();
+		if ($res)
+		{
+			while ($res && $row = mysql_fetch_array($res))
+			{
+				$resArr[] = $row;
+			}
+			if (count($resArr) == 1)
+			{
+				return $resArr[0];
+			}
+			else
+			{
+				return $resArr;	
+			}
+		}
+		else
+		{
+			return  false;
+		}
+	}
+
+	function insert($table,$data)
+	{
+		$keyArr = array();
+		$valueArr = array();
+		foreach ($data as $key => $value) {
+			$keyArr[] = $key;
+			$valueArr[] = $value;
+		}
+		$keys = "`" . implode("`,`", $keyArr) . "`";
+		$values = "'" . implode("','", $valueArr) . "'";
+		$sql = "insert into {$table}({$keys}) values({$values})";
+		return mysql_query($sql);
 	}
 }
