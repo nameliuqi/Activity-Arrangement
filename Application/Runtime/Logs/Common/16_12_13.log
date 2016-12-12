@@ -1,0 +1,30 @@
+[ 2016-12-13T04:53:03+08:00 ] 127.0.0.1 /taa/index.php/Sign/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+ERR: 无法加载模块:Sign
+
+[ 2016-12-13T04:53:23+08:00 ] 127.0.0.1 /taa/index.php/Sign/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+ERR: 无法加载模块:Sign
+
+[ 2016-12-13T04:55:57+08:00 ] 127.0.0.1 /taa/index.php/Sign/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000179s ]
+ERR: 无法加载模块:Sign
+
+[ 2016-12-13T04:57:24+08:00 ] 127.0.0.1 /taa/index.php/HomeSign/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+ERR: 无法加载模块:HomeSign
+
+[ 2016-12-13T04:57:31+08:00 ] 127.0.0.1 /taa/index.php/HomeSign/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+ERR: 无法加载模块:HomeSign
+
