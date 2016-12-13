@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="/taa/Public/css/style.css">
-		 
+		
+    <title>
+        add activity
+    </title>
+
 	</head>
 	<body>
 	<div>
@@ -15,20 +19,22 @@
 	
 	<!-- main part -->
 	
-
-    <div class="c">
-        <form action="dosignup" method="POST">
-            <p>用户名</p>
-            <input type="text" name="user_name" required="re">
-            <p>邮箱</p>
-            <input type="email" name="email" required="required">
-            <p>密码</p>
-            <input type="password" name="password" required="required">
-            <p>重复密码</p>
-            <input type="password" name="repassword" required="required">
+    <h2>
+            add activity
+    </h2>
+    <div class="add">
+        <form action="doAdd" method="post">
+            <p>activity name:</p>
+            <input type="text" name="name" required="required">
+            <p>time:</p>
+            <input type="datetime-local" name="time" value="2016-12-12T00:00">
+            <p>place:</p>
+            <input type="text" name="place">
+            <p>discription:</p>
+            <input type="text" name="discription">
             <br>
             <input type="submit">
-        </form>
+        </form>         
     </div>
 
 

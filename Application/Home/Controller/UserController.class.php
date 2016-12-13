@@ -17,10 +17,69 @@ class UserController extends Controller {
         $user_name = session('user_name');
 	}
 
-    public function index(){
+    public function index()
+    {
+        $act = D('Activity');
+        $activity = $act->getActivity(session('user_id'));
+        $this->assign('activity',$activity);
         $this->assign('user_name',session('user_name'));
         $this->display();
     }
+
+    public function editInfo()
+    {
+        $user = M('User');
+        $res = $user->where(array('user_id'=>session('user_id')))->find();
+        $this->assign('email',$res['email']);
+        $this->display('edit_info');
+    }
+
+    public function doEditInfo()
+    {
+        $validate = array(
+            array('email','email','Email格式错误！',2), // 如果输入则验证Email格式是否正确
+            array('password','4,30','密码长度不正确',0,'length'), // 验证密码是否在指定长度范围
+            array('repassword','password','确认密码不一致',0,'confirm')
+            );
+        $user = new \Home\Model\UserModel();
+        $user->setValidate(array('validate'=>$validate));
+        $oldpassword = I('post.oldpassword');
+        //verify the old pw
+        $data = array(
+            'password' => $oldpassword,
+            'user_id' => session('user_id')
+            );
+        $res = $user->where($data)->find();
+        if ($res)
+        {
+            $data = array(
+                'email' => I('post.email')
+                );
+            $res = $user->where($data)->find();
+            if ($res)
+            {
+                if ($res['user_id'] != session('user_id'))
+                {
+                    $this->error("email 已经存在123213",__MODULE__ .'/User/editInfo');
+                }
+            }
+        }
+        else
+        {
+            $this->error("wrong passowrd",__MODULE__ .'/User/editInfo');
+        }
+
+        if ($user->create())
+        {
+            $user->where("user_id = ".session('user_id'))->save();
+            $this->success('edit infomation success',__MODULE__ .'/User');
+        }
+        else
+        {
+            $this->error($user->getError(),__MODULE__ .'/User/editInfo');
+        }
+    }
+
     public function test(){
     	$m = D('User');
     	$res = $m->select();

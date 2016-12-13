@@ -1,0 +1,28 @@
+<extend name='Public:base' />
+
+<block name="head">
+    <title>
+        edit activity
+    </title>
+</block>
+
+<block name="content">
+    <h2>
+            edit activity
+    </h2>
+    <div class="edit">
+        <form action="__MODULE__/Activity/doEdit" method="post">
+            <p>activity name:</p>
+            <input type="text" name="name" required="required" value="{$activity.name}">
+            <input type="text" name="act_id" value="{$activity.act_id}" class="none">
+            <p>time:</p>
+            <input type="datetime-local" name="time" value="{$activity.time}">
+            <p>place:</p>
+            <input type="text" name="place" value="{$activity.place}">
+            <p>discription:</p>
+            <input type="text" name="discription" value="{$activity.discription}">
+            <br>
+            <input type="submit">
+        </form>         
+    </div>
+</block>

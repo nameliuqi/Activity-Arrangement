@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class SignController extends Controller {
+class SignController extends BaseController {
 
     public function index(){
         $this->display('sign_in');
@@ -58,6 +58,13 @@ class SignController extends Controller {
             $_SESSION['user_id'] = $user_id;
             $this->success('sign up success',__MODULE__ .'/User/index');
         }
+    }
+
+    public function signout()
+    {
+        session('user_name',null);
+        session('user_id',null);
+        $this->success('sign out success',__MODULE__ . '/Index/index');
     }
 
     public function test(){

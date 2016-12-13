@@ -2,6 +2,13 @@
 
 <block name="content">
     <div class="c welcome">
-        welcome {$user_name}    
+        welcome {$user_name} 
+        <p>
+            <a href="__MODULE__/User/editInfo">编辑个人信息</a>
+            |
+            <a href="__MODULE__/Sign/signout">登出</a>
+        </p>
     </div>
+    <hr>
+    <include file="activity" />
 </block>

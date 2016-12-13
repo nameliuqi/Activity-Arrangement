@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="/taa/Public/css/style.css">
-		 
+		
+    <title>
+        edit your infomation
+    </title>
+
 	</head>
 	<body>
 	<div>
@@ -15,17 +19,16 @@
 	
 	<!-- main part -->
 	
-
     <div class="c">
-        <form action="dosignup" method="POST">
-            <p>用户名</p>
-            <input type="text" name="user_name" required="re">
+        <form action="doEditInfo" method="POST">
             <p>邮箱</p>
-            <input type="email" name="email" required="required">
-            <p>密码</p>
-            <input type="password" name="password" required="required">
+            <input type="text" name="email" value="<?php echo ($email); ?>">
+            <p>旧密码</p>
+            <input type="password" name="oldpassword">
+            <p>新密码</p>
+            <input type="password" name="password">
             <p>重复密码</p>
-            <input type="password" name="repassword" required="required">
+            <input type="password" name="repassword">
             <br>
             <input type="submit">
         </form>

@@ -13,4 +13,5 @@ class NewUserModel extends Model{
         array('password','4,30','密码长度不正确',0,'length'), // 验证密码是否在指定长度范围
         array('repassword','password','确认密码不一致',0,'confirm'), // 验证确认密码是否和密码一致     
         );
+     
 }

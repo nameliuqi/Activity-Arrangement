@@ -1,17 +1,17 @@
-a<extend name="Public:base" />
+<extend name="Public:base" />
 
 <block name="content">
 
     <div class="c">
         <form action="dosignup" method="POST">
             <p>用户名</p>
-            <input type="text" name="user_name">
+            <input type="text" name="user_name" required="re">
             <p>邮箱</p>
-            <input type="text" name="email">
+            <input type="email" name="email" required="required">
             <p>密码</p>
-            <input type="password" name="password">
+            <input type="password" name="password" required="required">
             <p>重复密码</p>
-            <input type="password" name="repassword">
+            <input type="password" name="repassword" required="required">
             <br>
             <input type="submit">
         </form>
