@@ -53,7 +53,6 @@ class ActivityModel extends RelationModel{
             $data['user_id'] = $user_id;
         }
         $res = $this->relation(true)->order('time desc')->where($data)->select();
-        // die(json_encode($res));
         for ($i=0; $i < count($res); $i++) { 
             $time = $res[$i]['time'];
             $res[$i]['time'] = $this->time3($time);

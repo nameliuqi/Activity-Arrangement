@@ -12,7 +12,7 @@ class SheduleModel extends Model{
         array('deadline','time2',3,'callback')  // 对password字段在新增和编辑的时候使md5函数处理
         );
 
-    public function getShedule($act_id=-1)
+    public function getShedule($act_id=-1,$limit=1000)
     {
         $data = [];
         if ($act_id==-1)
@@ -23,7 +23,7 @@ class SheduleModel extends Model{
         {
             $data['act_id'] = $act_id;
         }
-        $res = $this->order('deadline desc')->where($data)->select();
+        $res = $this->order('deadline desc')->limit($limit)->where($data)->select();
         for ($i=0; $i < count($res); $i++) { 
             $time = $res[$i]['deadline'];
             $res[$i]['deadline'] = $this->time3($time);
@@ -39,7 +39,7 @@ class SheduleModel extends Model{
         return $res;
     }
 
-    public function getActivityByCondition($condition)
+    public function getSheduleByCondition($condition)
     {
         $res = $this->where($condition)->select();
         for ($i=0; $i < count($res); $i++) { 

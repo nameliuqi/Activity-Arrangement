@@ -5,3 +5,15 @@
 .none{
     display: none;
 }
+
+.col-md-3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.carousel-inner img {
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}

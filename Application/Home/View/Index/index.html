@@ -14,39 +14,47 @@
 </block>
 
 <block name="content">
-<include file="Index/slide" />
+    <include file="Index/slide" />
 
-<hr>
+    <hr>
 
-<h1>
-	activity list
-</h1>
+    <h1 class="c">
+     activity list
+    </h1>
 
- <foreach name="activity" item="vo">
-        <div class="list_item">
-            <h2 id="act_id" value="{$vo.act_id}">
-                activity name : {$vo.name}
-            </h2>
-            <p>
-                activity time : 
-                <input type="datetime-local" value="{$vo.time}" readonly="true">
-            </p>
-            <p>
-                activity place : {$vo.place}
-            </p>
-            <p>
-                activity discription : {$vo.discription}
-            </p>
-            <p>
-                <a href="__MODULE__/Activity/detail/act_id/{$vo.act_id}">查看详情</a>
-            </p>
-            <p>
-                <a href="mailto:{$vo.email}">联系主办方</a>
-                |
-                <a href="__MODULE__/User/join/act_id/{$vo.act_id}">关注该活动</a>
-            </p>
+
+<div class="container">
+    <div class="row">
+    <foreach name="activity" item="vo">
+        <div class="col-md-3">
+
+                <div class="list_item">
+                    <h2 id="act_id" value="{$vo.act_id}">
+                        activity name : {$vo.name}
+                    </h2>
+                    <p>
+                        activity time : 
+                        <input type="datetime-local" value="{$vo.time}" readonly="true">
+                    </p>
+                    <p>
+                        activity place : {$vo.place}
+                    </p>
+                    <p>
+                        activity discription : {$vo.discription}
+                    </p>
+                    <p>
+                        <a href="__MODULE__/Activity/detail/act_id/{$vo.act_id}">查看详情</a>
+                    </p>
+                    <p>
+                        <a href="mailto:{$vo.email}">联系主办方</a>
+                        |
+                        <a href="__MODULE__/User/join/act_id/{$vo.act_id}">关注该活动</a>
+                    </p>
+                </div>   
+            
         </div>
-        <br>
-    </foreach>
+        </foreach>     
+    </div>
+</div>
 
 </block> 

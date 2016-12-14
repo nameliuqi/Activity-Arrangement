@@ -21,8 +21,14 @@ class UserController extends Controller {
     {
         $act = D('Activity');
         $activity = $act->getActivity(session('user_id'));
+        $joi = D('Joinact');
+        $joinact = $joi->getJoinActivity(session('user_id'));
+        $she = D('Shedule');
+        $shedule = $she->getShedule(-1,5);
         $this->assign('activity',$activity);
         $this->assign('user_name',session('user_name'));
+        $this->assign('join',$joinact);
+        $this->assign('shedule',$shedule);
         $this->display();
     }
 
@@ -82,13 +88,16 @@ class UserController extends Controller {
 
     public function join()
     {
-        $joi = D('joinact');
-        if ($joi->create())
+        $joi = D('Joinact');
+        $data = array();
+        $data['user_id'] = session('user_id');
+        $data['act_id'] = I('get.act_id',-1);
+        if ($data['act_id'] < 0)
         {
-            if ($joi->user_id != session('user_id'))
-            {
-                $this->error('hack attemp');
-            }
+            $this->error("wrong access");
+        }
+        if ($joi->create($data))
+        {
             $res = $joi->add();
             if ($res)
             {

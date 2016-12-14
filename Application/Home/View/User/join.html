@@ -1,6 +1,6 @@
 <div>
-    <foreach name="joinedActivity" item="vo">
-        <div>
+    <foreach name="join" item="vo">
+        <div class="join_item">
             <h2 id="act_id" value="{$vo.act_id}">
                 activity name : {$vo.name}
             </h2>
@@ -9,13 +9,11 @@
                 <input type="datetime-local" value="{$vo.time}" readonly="true">
             </p>
             <p>
-                activity place : {$vo.place}
-            </p>
-            <p>
                 <a href="__MODULE__/Activity/detail/act_id/{$vo.act_id}">查看详情</a>
                 |
                 <a href="">取消关注</a>
             </p>
         </div>
     </foreach>
-</div>  
+    <hr>
+</div>

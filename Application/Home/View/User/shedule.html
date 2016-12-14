@@ -1,0 +1,16 @@
+<foreach name="shedule" item="vo">
+    <div class="shedule_item">
+        <h3 id="shedule_id" value="{$vo.shedule_id}">
+            shedule name : {$vo.name}
+        </h3>
+        <p>
+            deadline : 
+            <input type="datetime-local" value="$vo.deadline" readonly="true">
+        </p>
+        <p>
+            <a href="__MODULE__/Shedule/detail/shedule_id/{$vo.shedule_id}">
+                查看详情        
+            </a>
+        </p>
+    </div>
+</foreach>

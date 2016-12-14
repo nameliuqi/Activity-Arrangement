@@ -1,6 +1,16 @@
-<div>
-	<span><a href="__ROOT__">activity arrangement</a></span> &nbsp;
-<span><a href="__MODULE__/Sign/signin">sign in</a></span> | <span><a href="__MODULE__/Sign/signup">sign up</a></span>
-
-<span style="float:right"><a href="__MODULE__/User">user center</a></span>
-</div>
+<nav class="navbar navbar-default" role="navigation"> 
+    <div class="container-fluid"> 
+        <div class="navbar-header"> 
+            <a class="navbar-brand" href="__ROOT__">activity arrangement</a> 
+        </div> 
+        <ul class="nav navbar-nav navbar-left"> 
+            <li><a href="__MODULE__/Sign/signup"><span class="glyphicon glyphicon-user"></span> 注册</a></li> 
+            <li><a href="__MODULE__/Sign/signin"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right"> 
+            <li><a href="__MODULE__/User">
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-user"></span>用户中心</button>
+            </a></li> 
+        </ul> 
+    </div> 
+</nav>
