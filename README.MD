@@ -6,5 +6,4 @@ THIS PROJECT IS PROGRAMED FOR SOFTWARE DESIGN.
 - 变量 '_' 分隔
 - 函数 驼峰法
 - 注释 必要注释
-- mvc框架 自己手写 因为没有模板引擎,所以难看一点,旧版内容在init之后的早期版本中
-- update framework use ThinkPHP
+- mvc框架 自己手写 因为没有模板引擎,所以难看一点

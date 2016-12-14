@@ -2,3 +2,5 @@
 ThinkPHP/*
 #mac os file
 .DS_Store
+#temp file
+Application/Runtime/*
