@@ -48,6 +48,7 @@ class ActivityController extends BaseController {
 
     public function edit()
     {
+        $this->isSignin();
         $act_id = I('get.act_id');
         $act = D('Activity');
         $activity = $act->getOneActivity($act_id);
@@ -57,6 +58,7 @@ class ActivityController extends BaseController {
 
     public function doEdit()
     {
+        $this->isSignin();
         $act_id = I('post.act_id');
         $act = D('Activity');
         if ($act_id)

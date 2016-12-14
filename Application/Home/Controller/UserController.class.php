@@ -80,6 +80,32 @@ class UserController extends Controller {
         }
     }
 
+    public function join()
+    {
+        $joi = D('joinact');
+        if ($joi->create())
+        {
+            if ($joi->user_id != session('user_id'))
+            {
+                $this->error('hack attemp');
+            }
+            $res = $joi->add();
+            if ($res)
+            {
+                $this->success('关注成功',__MODULE__ . '/User/index');
+            }
+            else
+            {
+                $this->error('关注失败');
+            }
+        }
+        else
+        {
+            $this->error($joi->getError());
+        }
+
+    }
+
     public function test(){
     	$m = D('User');
     	$res = $m->select();

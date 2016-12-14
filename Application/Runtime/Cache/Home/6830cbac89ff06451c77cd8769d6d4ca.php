@@ -24,6 +24,7 @@
         </p>
     </div>
     <hr>
+    <h2>我的活动</h2>
     <div>
     <?php if(is_array($activity)): foreach($activity as $key=>$vo): ?><div class="list_item">
             <h2 id="act_id" value="<?php echo ($vo["act_id"]); ?>">
@@ -40,7 +41,7 @@
                 activity discription : <?php echo ($vo["discription"]); ?>
             </p>
             <p>
-                <a href="__MODELE__/Shedule/add/act_id/<?php echo ($vo["act_id"]); ?>">add shedule</a>
+                <a href="/taa/index.php/Home/Shedule/add/act_id/<?php echo ($vo["act_id"]); ?>">add shedule</a>
             </p>
             <p>
                 <a href="/taa/index.php/Home/Activity/detail/act_id/<?php echo ($vo["act_id"]); ?>">查看详情</a>
@@ -53,6 +54,10 @@
         </p>
     </div>
 </div>
+    <hr>
+    <h2>我关注的活动</h2>
+    <hr>
+    <h2>我的日程</h2>
 
 
 	<hr>

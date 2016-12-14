@@ -1,6 +1,6 @@
 <div>
-    <foreach name="activity" item="vo">
-        <div class="list_item">
+    <foreach name="joinedActivity" item="vo">
+        <div>
             <h2 id="act_id" value="{$vo.act_id}">
                 activity name : {$vo.name}
             </h2>
@@ -12,20 +12,10 @@
                 activity place : {$vo.place}
             </p>
             <p>
-                activity discription : {$vo.discription}
-            </p>
-            <p>
-                <a href="__MODULE__/Shedule/add/act_id/{$vo.act_id}">add shedule</a>
-            </p>
-            <p>
                 <a href="__MODULE__/Activity/detail/act_id/{$vo.act_id}">查看详情</a>
+                |
+                <a href="">取消关注</a>
             </p>
         </div>
     </foreach>
-    <hr>
-    <div>
-        <p>
-            <a href="__MODULE__/Activity/add">add activity</a>
-        </p>
-    </div>
-</div>
+</div>  

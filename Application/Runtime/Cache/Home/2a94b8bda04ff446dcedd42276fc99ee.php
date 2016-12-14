@@ -67,6 +67,31 @@
 	activity list
 </h1>
 
+ <?php if(is_array($activity)): foreach($activity as $key=>$vo): ?><div class="list_item">
+            <h2 id="act_id" value="<?php echo ($vo["act_id"]); ?>">
+                activity name : <?php echo ($vo["name"]); ?>
+            </h2>
+            <p>
+                activity time : 
+                <input type="datetime-local" value="<?php echo ($vo["time"]); ?>" readonly="true">
+            </p>
+            <p>
+                activity place : <?php echo ($vo["place"]); ?>
+            </p>
+            <p>
+                activity discription : <?php echo ($vo["discription"]); ?>
+            </p>
+            <p>
+                <a href="/taa/index.php/Home/Activity/detail/act_id/<?php echo ($vo["act_id"]); ?>">查看详情</a>
+            </p>
+            <p>
+                <a href="mailto:<?php echo ($vo["email"]); ?>">联系主办方</a>
+                |
+                <a href="/taa/index.php/Home/User/join/act_id/<?php echo ($vo["act_id"]); ?>">关注该活动</a>
+            </p>
+        </div>
+        <br><?php endforeach; endif; ?>
+
 
 
 	<hr>

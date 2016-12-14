@@ -897,3 +897,364 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
 
+[ 2016-12-14T05:55:14+08:00 ] 127.0.0.1 /taa/index.php/Home/Activity/detail/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+
+[ 2016-12-14T05:55:16+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/detail/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+
+[ 2016-12-14T06:04:49+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/detail/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+
+[ 2016-12-14T06:04:51+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/edit/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000183s ]
+
+[ 2016-12-14T06:07:14+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/edit/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+
+[ 2016-12-14T06:07:26+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+
+[ 2016-12-14T06:07:29+08:00 ] 127.0.0.1 /taa/index.php/Home/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+
+[ 2016-12-14T06:11:09+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+
+[ 2016-12-14T06:11:12+08:00 ] 127.0.0.1 /taa/index.php/Home/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+
+[ 2016-12-14T06:11:39+08:00 ] 127.0.0.1 /taa/index.php/Home/Activity/detail/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+
+[ 2016-12-14T06:11:42+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/detail/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+
+[ 2016-12-14T06:11:43+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/edit/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+
+[ 2016-12-14T06:13:26+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+ERR: 1292:Incorrect datetime value: '' for column 'deadline' at row 1
+ [ SQL语句 ] : UPDATE `shedule` SET `name`='s1',`finish`='f1',`deadline`='' WHERE `shedule_id` = 1
+
+[ 2016-12-14T06:14:34+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/edit/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+
+[ 2016-12-14T06:16:15+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+
+[ 2016-12-14T06:16:16+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/detail/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+
+[ 2016-12-14T06:16:27+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/edit/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000179s ]
+
+[ 2016-12-14T08:55:40+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+
+[ 2016-12-14T09:09:47+08:00 ] 127.0.0.1 /taa/index.php/Home/__MODELE__/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+ERR: 无法加载控制器:__MODELE__
+
+[ 2016-12-14T09:09:53+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+
+[ 2016-12-14T09:09:54+08:00 ] 127.0.0.1 /taa/index.php/Home/__MODELE__/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000175s ]
+ERR: 无法加载控制器:__MODELE__
+
+[ 2016-12-14T09:18:38+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+
+[ 2016-12-14T09:18:40+08:00 ] 127.0.0.1 /taa/index.php/Home/__MODELE__/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000175s ]
+ERR: 无法加载控制器:__MODELE__
+
+[ 2016-12-14T09:19:18+08:00 ] 127.0.0.1 /taa/index.php/Home/__MODELE__/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+ERR: 无法加载控制器:__MODELE__
+
+[ 2016-12-14T09:19:20+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+
+[ 2016-12-14T09:19:21+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+
+[ 2016-12-14T09:19:41+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/add/act_id/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+
+[ 2016-12-14T09:20:49+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+
+[ 2016-12-14T09:20:52+08:00 ] 127.0.0.1 /taa/index.php/Home/Activity/detail/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+
+[ 2016-12-14T09:20:55+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+
+[ 2016-12-14T09:21:05+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+ERR: 1292:Incorrect datetime value: '' for column 'deadline' at row 1
+ [ SQL语句 ] : INSERT INTO `shedule` (`act_id`,`name`,`deadline`,`user_id`) VALUES ('0','dead','','2')
+
+[ 2016-12-14T09:23:21+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+ERR: 1292:Incorrect datetime value: '' for column 'deadline' at row 1
+ [ SQL语句 ] : INSERT INTO `shedule` (`act_id`,`name`,`deadline`,`user_id`) VALUES ('0','dead','','2')
+
+[ 2016-12-14T09:23:43+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2016-12-14T09:23:59+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+
+[ 2016-12-14T09:24:03+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+
+[ 2016-12-14T09:24:06+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+
+[ 2016-12-14T09:25:01+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000194s ]
+
+[ 2016-12-14T09:25:24+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000184s ]
+
+[ 2016-12-14T09:26:12+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+ERR: 1292:Incorrect datetime value: '' for column 'deadline' at row 1
+ [ SQL语句 ] : INSERT INTO `shedule` (`act_id`,`name`,`deadline`,`user_id`) VALUES ('2','dead','','2')
+
+[ 2016-12-14T09:26:46+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+ERR: 1364:Field 'description' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `shedule` (`act_id`,`name`,`deadline`,`user_id`) VALUES ('2','dead','2016-12-12 00:00','2')
+
+[ 2016-12-14T09:27:25+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000193s ]
+ERR: 1364:Field 'finish' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `shedule` (`act_id`,`name`,`deadline`,`user_id`) VALUES ('2','dead','2016-12-12 00:00','2')
+
+[ 2016-12-14T09:29:47+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+
+[ 2016-12-14T09:30:17+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/doAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+
+[ 2016-12-14T09:30:18+08:00 ] 127.0.0.1 /taa/index.php/Home/Activity/detail/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+
+[ 2016-12-14T09:34:48+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+
+[ 2016-12-14T09:53:25+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+
+[ 2016-12-14T10:21:07+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001284s ]
+
+[ 2016-12-14T10:21:34+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+
+[ 2016-12-14T10:22:00+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+
+[ 2016-12-14T10:23:14+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+
+[ 2016-12-14T10:23:36+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-12-14T10:38:50+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+
+[ 2016-12-14T10:49:45+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-12-14T10:49:52+08:00 ] 127.0.0.1 /taa/index.php/Home/Activity/detail/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+
+[ 2016-12-14T10:50:00+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/detail/shedule_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+
+[ 2016-12-14T10:55:32+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+
+[ 2016-12-14T10:58:33+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+
+[ 2016-12-14T11:04:24+08:00 ] 127.0.0.1 /taa/index.php/Home/Activity/detail/act_id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+
+[ 2016-12-14T11:04:28+08:00 ] 127.0.0.1 /taa/index.php/Home/User
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+
+[ 2016-12-14T11:04:29+08:00 ] 127.0.0.1 /taa/index.php/Home/Sign/signout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+
+[ 2016-12-14T11:04:30+08:00 ] 127.0.0.1 /taa/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+
+[ 2016-12-14T11:04:32+08:00 ] 127.0.0.1 /taa/index.php/Home/Activity/detail/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+
+[ 2016-12-14T11:04:34+08:00 ] 127.0.0.1 /taa/index.php/Home/Activity/edit/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+
+[ 2016-12-14T11:04:37+08:00 ] 127.0.0.1 /taa/index.php/Home/Sign/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+
+[ 2016-12-14T11:04:38+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+
+[ 2016-12-14T11:04:40+08:00 ] 127.0.0.1 /taa/index.php/Home/Shedule/add/act_id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+
+[ 2016-12-14T11:04:43+08:00 ] 127.0.0.1 /taa/index.php/Home/Sign/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+
+[ 2016-12-14T11:04:44+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+
+[ 2016-12-14T11:05:37+08:00 ] 127.0.0.1 /taa/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+

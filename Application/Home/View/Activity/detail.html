@@ -19,10 +19,12 @@
                     activity discription : {$activity.discription}
                 </p>
                 <p>
-                    <a href="__MODELE__/Shedule/add/act_id/{$activity.act_id}">add shedule</a>
+                    <a href="__MODULE__/Shedule/add/act_id/{$activity.act_id}">add shedule</a>
                 </p>
                 <p>
                     <a href="__MODULE__/Activity/edit/act_id/{$activity.act_id}">edit</a>
+                    |
+                    <a href="">delete</a>
                 </p>
             </div>
     </div>
@@ -46,6 +48,11 @@
                 </p>
                 <p>
                     finish : {$vo.finish}
+                </p>
+                <p>
+                    <a href="__MODULE__/Shedule/detail/shedule_id/{$vo.shedule_id}">
+                        查看详情        
+                    </a>
                 </p>
             </div>
         </foreach>

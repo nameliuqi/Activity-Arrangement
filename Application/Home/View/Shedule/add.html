@@ -1,0 +1,28 @@
+<extend name='Public:base' />
+
+<block name="head">
+    <title>
+        add shedule
+    </title>
+</block>
+
+<block name="content">
+    <h2>
+            add shedule
+    </h2>
+    <div class="add">
+        <form action="__MODULE__/Shedule/doAdd" method="post">
+            <p>activity name:</p>
+            <input type="text" name="act_id" value="{$act_id}" class="none">
+            <input type="text" name="name" required="required">
+            <p>deadline:</p>
+            <input type="datetime-local" name="deadline" value="2016-12-12T00:00">
+            <p>finish:</p>
+            <input type="text" name="discription">
+            <p>discription:</p>
+            <input type="text" name="discription">
+            <br>
+            <input type="submit">
+        </form>         
+    </div>
+</block>

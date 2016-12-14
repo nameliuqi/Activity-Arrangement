@@ -34,10 +34,12 @@
                     activity discription : <?php echo ($activity["discription"]); ?>
                 </p>
                 <p>
-                    <a href="__MODELE__/Shedule/add/act_id/<?php echo ($activity["act_id"]); ?>">add shedule</a>
+                    <a href="/taa/index.php/Home/Shedule/add/act_id/<?php echo ($activity["act_id"]); ?>">add shedule</a>
                 </p>
                 <p>
                     <a href="/taa/index.php/Home/Activity/edit/act_id/<?php echo ($activity["act_id"]); ?>">edit</a>
+                    |
+                    <a href="">delete</a>
                 </p>
             </div>
     </div>
@@ -60,6 +62,11 @@
                 </p>
                 <p>
                     finish : <?php echo ($vo["finish"]); ?>
+                </p>
+                <p>
+                    <a href="/taa/index.php/Home/Shedule/detail/shedule_id/<?php echo ($vo["shedule_id"]); ?>">
+                        查看详情        
+                    </a>
                 </p>
             </div><?php endforeach; endif; ?>
     </div>

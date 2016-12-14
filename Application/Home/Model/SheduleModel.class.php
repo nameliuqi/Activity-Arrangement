@@ -49,10 +49,17 @@ class SheduleModel extends Model{
         return $res;
     }
 
+    public function getAcitvityId($shedule_id)
+    {
+        $data['shedule_id'] = $shedule_id;
+        $res = $this->where($data)->field('act_id')->find();
+        return $res;
+    }
+
     public function validateUser($shedule_id)
     {
         //judge the act is belong to the user
-        $data['shedule_id'] = $act_id;
+        $data['shedule_id'] = $shedule_id;
         $data['user_id'] = session('user_id');
         $res = $this->where($data)->find();
         if ($res)
@@ -67,7 +74,7 @@ class SheduleModel extends Model{
 
     public function time2()
     {
-        $time = I('post.time');
+        $time = I('post.deadline');
         return str_replace("T", ' ', $time);
     }
 
