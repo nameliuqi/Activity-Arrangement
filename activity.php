@@ -52,3 +52,29 @@ else if ($act == 'insert')
 	}
 }
 //act == show_list is used in user.php
+else if ($act == 'detail')
+{
+	if (!checkUserLogin())
+	{
+		showMessage('please login','./login.html');
+	}
+	$act_id = getFormData('act_id',-1);
+	if ($act_id == -1)
+	{
+		showMessage('please choose a action','./user.php');
+	}
+	$user_id = $_SESSION['user_id'];
+
+	//show detail page
+	$activity_detail_page = file_get_contents(TPLPATH.'activity_detail.html');
+	$header_page = file_get_contents(TPLPATH.'header.html');
+	$activity_item_page = showActivityList($user_id,$act_id);
+	$shedule_item_page = showSheduleList($act_id,$user_id);
+	$render_data = array(
+		'header' => $header_page,
+		'activity_item' => $activity_item_page,
+		'shedule_item' => $shedule_item_page,
+		'查看详情' => ''
+		);
+	die(render($activity_detail_page,$render_data));
+}

@@ -7,6 +7,10 @@
 - add ajax call and js
 - 活动描述更改为富文本
 - 添加互动详情
+- DAO的完善
+- update和delate
+- 日程
+- 更换写错的description
 
 ##NFR
 - 防止sql注入

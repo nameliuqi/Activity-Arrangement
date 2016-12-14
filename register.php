@@ -3,7 +3,6 @@ require_once('./includes/lib_common.php');
 require_once('./db/DAOClass.php');
 require_once('./includes/init.php');
 
-showHeader();
 $act = getFormData('act');
 $return  ="<a href='./register.html'> return</a>";
 if ($act = 'register')
@@ -50,8 +49,9 @@ if ($act = 'register')
 		{
 		//	echo "<script>alert('登录成功！'); setTimeout('',2000); windows.location.href='./index.php';</script>";	
 			$res = $db->select('user',array("user_name"=>$user_name));
-			$_SESSION['uesr_id'] = $res['user_id'];
+			$_SESSION['user_id'] = $res['user_id'];
 			$_SESSION['user_name'] = $res['user_name'];
+			showMessage('register success','./user.php');
 			exit;
 		}
 		else

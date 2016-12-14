@@ -38,7 +38,7 @@ class DAO
 	// 	return $ans;
 	// }
 
-	function select($table,$data='',$logic='AND',$condition="")
+	function select($table,$data='',$logic='AND',$condition="",$filed='*')
 	{
 		//logic is AND or OR
 		if ($data == '')
@@ -58,7 +58,7 @@ class DAO
 				$where .= "`{$key}`='{$value}' ";
 			}
 		}	
-		$sql = "select * from {$table} " . $where . $condition;
+		$sql = "select {$filed} from {$table} " . $where . $condition;
 		$res = mysql_query($sql);
 		$resArr = array();
 		if ($res)

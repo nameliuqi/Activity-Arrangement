@@ -3,17 +3,16 @@ require_once('./includes/init.php');
 require_once('./includes/lib_common.php');
 require_once('./db/DAOClass.php');
 
-showHeader();
 $user_name = getFormData('user_name');
 $password = getFormData('password');
 
 if ($user_name == '')
 {
-	die('empty user_name');
+	showMessage('empty user_name');
 }
 else if ($password == '')
 {
-	die('empty password');
+	showMessage('empty password');
 }
 else
 {
@@ -30,16 +29,16 @@ else
 			$user_id = $res['user_id'];
 			$_SESSION['user_id'] = $user_id;
 			$_SESSION['user_name'] = $user_name;
-			echo "<a href='./user.php'>login success<a>";
+			showMessage("<a href='./user.php'>login success<a>");
 		}
 		else
 		{
 
-			die("<a href='./user.php'>login fail<a>");
+			showMessage("<a href='./user.php'>login fail<a>");
 		}
 	}
 	else
 	{
-		die('data base error');
+		showMessage('wrong user or password','./login.html');
 	}
 }

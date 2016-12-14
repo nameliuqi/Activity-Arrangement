@@ -1,6 +1,6 @@
 <?php
 require_once('./includes/init.php');
-
+//this file is useless
 $act = isset($_REQUEST['act'])?$_REQUEST['act']:'show_page';
 
 if ($act == 'show_page')
