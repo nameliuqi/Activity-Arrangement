@@ -58,6 +58,7 @@ class SheduleController extends BaseController {
     {
         $shedule_id = I('post.shedule_id');
         $she = D('Shedule');
+        // die(json_encode($_POST));
         if ($shedule_id)
         {
             if (!$she->validateUser($shedule_id))

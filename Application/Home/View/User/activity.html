@@ -1,29 +1,29 @@
 <div>
     <foreach name="activity" item="vo">
-        <div class="list_item">
-            <h2 id="act_id" value="{$vo.act_id}">
-                activity name : {$vo.name}
-            </h2>
-            <p>
-                activity time : 
-                <input type="datetime-local" value="{$vo.time}" readonly="true">
-            </p>
-            <p>
-                activity place : {$vo.place}
-            </p>
-            <p>
-                activity discription : {$vo.discription}
-            </p>
-            <p>
-                <a href="__MODULE__/Shedule/add/act_id/{$vo.act_id}">add shedule</a>
-            </p>
-            <p>
-                <a href="__MODULE__/Activity/detail/act_id/{$vo.act_id}">查看详情</a>
-            </p>
-        </div>
-    </foreach>
+            <div class="col-md-4">  
+            <div class="card card-inverse well">
+                    <div class="card-block">
+                        <h4 class="card-title">{$vo.name}</h4>
+                        <p class="card-text"><input type="datetime-local" value="{$vo.time}" readonly="true"></p>
+                    </div>
+                    <hr>
+                    <div class="card-block">
+                        <p href="#" class="card-text">详细信息：{$vo.discription}</p>
+                        <a href="__MODULE__/Activity/detail/act_id/{$vo.act_id}" class="card-link">查看详情</a>
+                    </div>
+                    <hr>
+                    <div class="card-block">
+                        <p>
+                        <a href="__MODULE__/Shedule/add/act_id/{$vo.act_id}">add shedule</a>
+                        </p>
+                        <p>
+                    </div>
+                </div>
+
+            </div>
+        </foreach>  
     <hr>
-    <div>
+    <div class="col-md-12 well">
         <p>
             <a href="__MODULE__/Activity/add">add activity</a>
         </p>

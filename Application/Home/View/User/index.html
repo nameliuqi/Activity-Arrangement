@@ -1,7 +1,7 @@
 <extend name="Public:base" />
 
 <block name="content">
-    <div class="c welcome">
+    <div class="c welcome well">
         welcome {$user_name} 
         <p>
             <a href="__MODULE__/User/editInfo">编辑个人信息</a>
@@ -11,11 +11,17 @@
     </div>
     <hr>
     <h2>我的活动</h2>
-    <include file="activity" />
+    <div class="row">
+        <include file="activity" />        
+    </div>
     <hr>
     <h2>我关注的活动</h2>
-    <include file="join" />
+    <div class="row">
+        <include file="join" />
+    </div>
     <hr>
     <h2>我的日程</h2>
-    <include file="shedule" />
+    <div class="row">
+        <include file="shedule" />
+    </div>
 </block>

@@ -10,7 +10,7 @@
     <h2>
             edit activity
     </h2>
-    <div class="edit">
+    <div class="edit well">
         <form action="__MODULE__/Activity/doEdit" method="post">
             <p>activity name:</p>
             <input type="text" name="name" required="required" value="{$activity.name}">
@@ -20,7 +20,7 @@
             <p>place:</p>
             <input type="text" name="place" value="{$activity.place}">
             <p>discription:</p>
-            <input type="text" name="discription" value="{$activity.discription}">
+            <textarea name="discription" class="form-control" rows="3" value="{$activity.discription}">{$activity.discription}</textarea>
             <br>
             <input type="submit">
         </form>         

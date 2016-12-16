@@ -1,13 +1,14 @@
 <div>
     <foreach name="join" item="vo">
-        <div class="join_item">
-            <h2 id="act_id" value="{$vo.act_id}">
+        <div class="join_item col-md-4 well">
+            <h3 id="act_id" value="{$vo.act_id}">
                 activity name : {$vo.name}
-            </h2>
+            </h3>
             <p>
                 activity time : 
                 <input type="datetime-local" value="{$vo.time}" readonly="true">
             </p>
+            <hr>
             <p>
                 <a href="__MODULE__/Activity/detail/act_id/{$vo.act_id}">查看详情</a>
                 |

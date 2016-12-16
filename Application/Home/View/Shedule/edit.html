@@ -10,18 +10,19 @@
     <h2>
             edit shedule
     </h2>
-    <div class="edit">
+    <div class="edit well">
         <form action="__MODULE__/Shedule/doEdit" method="post">
             <p>shedule name:</p>
             <input type="text" name="name" required="required" value="{$shedule.name}">
             <input type="text" name="shedule_id" value="{$shedule.shedule_id}" class="none">
             <p>deadline:</p>
-            <input type="datetime-local" name="time" value="{$shedule.deadline}" defaultVale="2016-11-11T11:11">
+            <input type="datetime-local" name="deadline" value="{$shedule.deadline}" defaultVale="2016-11-11T11:11">
             <p>place:</p>
             <input type="text" name="finish" value="{$shedule.finish}">
             <p>discription:</p>
             <input type="text" name="discription" value="{$shedule.discription}">
             <br>
+            <hr>
             <input type="submit">
         </form>         
     </div>
